@@ -58,7 +58,6 @@ export default function Chat() {
                 <div className="scroller-content space-y-4" id="scrollerContent">
                     {messages.map(m => (
                         <ChatMessage
-                            className="item"
                             key={m.id}
                             role={m.role}
                             content={m.content}
