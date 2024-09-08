@@ -9,7 +9,7 @@ Kasutaja sõbralikkuse nimel on rakendusesse lisatud vastavalt kuva suurusele mu
 
 ## Automaatne testimine
 
-Hetkel rakenduses puuduvad autommaat testid, tulevikus võiks lisada rakendusele [Jest](https://jestjs.io/docs/getting-started) testid. Testida võiks näiteks ChatMessage ja ThemeToggle komponentide renderdamist ja funktsionaalsust. Lisaks võiks testida ka openai api post requesti.
+Hetkel rakenduses puuduvad autommaattestid, tulevikus võiks lisada rakendusele [Jest](https://jestjs.io/docs/getting-started) testid. Testida võiks näiteks ChatMessage ja ThemeToggle komponentide renderdamist ja funktsionaalsust. Lisaks võiks testida ka openai api post requesti.
 
 ## Võimalikud ohud ja turvalisus
 Rakenduse peamiseks ohuks on bottimine ja suur (suurem kui open ai praegune key lubab) kasutajate läbi käik. Kuigi Verceli tulemüür juba kaitseb mingil määral rünnakute eest on vähendamiseks võimalik sisse lülitada ka Verceli Attack Challenge Mode. Lisaks võib tulevikus lisada rakendusele kasutajate süsteemi, et vähendada massilisi bottimise rünnakuid. 
