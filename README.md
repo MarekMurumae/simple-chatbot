@@ -1,8 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Antud projekti raames on tehtud kerge vestlusrobot kasutades openai apit.
 
-## Getting Started
+## Koodi struktuur
+Tegemist on next.js Typescript rakendusega, mis kasutab reacti hook'e. Fail Layout.tsx määrab rakenduse peamised paigutuse ja metaandmed ja kasutab Next.js'i, et määrata globaalsed fondid. Rakenduses on kasutusel üks CSS fail (global.css), kuid kasutab enamasti TailwindCSSi stiili määramiseks. Valisin TailwindCSS, sest seda on kerge kasutada. Rakenduse koodi loetavuse nimel on jagatud kood komponentideks, kasutatud index.ts faile import statementide lühendamiseks ja kerimise funktsionaalsus teostatud läbi CSS'i ning kasutusel public kaust faviconi ja muude rakenduse tulevikus vajalike resource'ide hoidmiseks.
 
-First, run the development server:
+## Kasutaja sõbralikkus
+
+Kasutaja sõbralikkuse nimel on rakendusesse lisatud vastavalt kuva suurusele muutuvad komponentid, automaatne ekraani kerimine ja nii päeva kui öö versioon. Ka värviskeemiks on valitud kasutaja jaoks võimalikult silmale kerge skeem.
+
+## Automaatne testimine
+
+Hetkel rakenduses puuduvad autommaat testid, tulevikus võiks lisada rakendusele [Jest](https://jestjs.io/docs/getting-started) testid. Testida võiks näiteks ChatMessage ja ThemeToggle komponentide renderdamist ja funktsionaalsust. Lisaks võiks testida ka openai api post requesti.
+
+## Võimalikud ohud ja turvalisus
+Rakenduse peamiseks ohuks on bottimine ja suur (suurem kui open ai praegune key lubab) kasutajate läbi käik. Kuigi Verceli tulemüür juba kaitseb mingil määral rünnakute eest on vähendamiseks võimalik sisse lülitada ka Verceli Attack Challenge Mode. Lisaks võib tulevikus lisada rakendusele kasutajate süsteemi, et vähendada massilisi bottimise rünnakuid. 
+
+Ohuks on ka rakenduse api võti, kuid see on juba Verceli poolt kaitstud. Lisaks ei ole võti kätte saadav siit repositooriumist.
+
+## Live
+
+App is live at: https://simple-chatbot-liard.vercel.app/
+
+## Running development server
 
 ```bash
 npm run dev
@@ -16,21 +34,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The page auto-updates as you edit the project files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## About project
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
