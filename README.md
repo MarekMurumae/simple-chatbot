@@ -5,7 +5,7 @@ Tegemist on [Next.js](https://nextjs.org) Typescript rakendusega, mis kasutab Re
 
 ## Kasutaja sõbralikkus
 
-Kasutaja sõbralikkuse nimel on rakendusesse lisatud vastavalt kuva suurusele muutuvad komponentid, automaatne ekraani kerimine ja nii päeva kui öö versioon. Ka värviskeemiks on valitud kasutaja jaoks võimalikult silmale kerge skeem.
+Kasutaja sõbralikkuse nimel on rakendusesse lisatud vastavalt kuva suurusele muutuvad komponentid, automaatne ekraani kerimine ja nii päeva kui öö versioon. Ka värviskeemiks on valitud kasutaja jaoks võimalikult silmale kerge skeem. Lisaks on rakenduse osapoolte sõnumite pooled valitud sarnaselt teistele populaarsetele rakendustele.
 
 ## Automaatne testimine
 
