@@ -5,13 +5,16 @@ import { useChat } from 'ai/react';
 import { ChatMessage, ThemeToggle } from './components';
 
 const useWindowHeight = () => {
-    const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight);
+    const [windowHeight, setWindowHeight] = useState<number | null>(null);
 
     useEffect(() => {
-        const handleResize = () => setWindowHeight(window.innerHeight);
+        if (typeof window !== 'undefined') {
+            const handleResize = () => setWindowHeight(window.innerHeight);
+            handleResize();
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
     }, []);
 
     return windowHeight;
@@ -43,9 +46,9 @@ export default function Chat() {
         document.documentElement.setAttribute('data-theme', newTheme);
     };
 
-    // Determine classes based on screen height
-    const bottomMarginClass = windowHeight < 1000 ? 'mb-0' : 'mb-10';
-    const pyClass = windowHeight < 1000 ? 'py-0' : 'py-10';
+    // Determine classes based on screen height if available (during build there is no window)
+    const bottomMarginClass = windowHeight && windowHeight < 1000 ? 'mb-0' : 'mb-10';
+    const pyClass = windowHeight && windowHeight < 1000 ? 'py-0' : 'py-10';
 
     return (
         <div className={`flex flex-col w-full max-w-md ${pyClass} mx-auto stretch`}>
