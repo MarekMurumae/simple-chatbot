@@ -9,7 +9,7 @@ interface ChatMessageProps {
 const ChatMessage: React.FC<ChatMessageProps> = ({ role, content, aiProfilePic }) => {
     return (
         <div
-            className={`flex ${role === 'user' ? 'justify-end' : 'justify-start items-start space-x-2'}`}
+            className={`flex ${role === 'user' ? 'justify-end mr-2' : 'justify-start items-start space-x-2 mr-2'}`}
         >
             {role === 'assistant' && (
                 <img
