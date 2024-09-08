@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useChat } from 'ai/react';
-import { ChatMessage, ThemeToggle } from './components';
+import { ChatMessage, ThemeToggle } from "@/app/components";
 
 const useWindowHeight = () => {
     const [windowHeight, setWindowHeight] = useState<number | null>(null);
@@ -54,15 +54,18 @@ export default function Chat() {
         <div className={`flex flex-col w-full max-w-md ${pyClass} mx-auto stretch`}>
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
-            <div className="flex flex-col space-y-4">
-                {messages.map(m => (
-                    <ChatMessage
-                        key={m.id}
-                        role={m.role}
-                        content={m.content}
-                        aiProfilePic={aiProfilePic}
-                    />
-                ))}
+            <div className="scroller">
+                <div className="scroller-content space-y-4" id="scrollerContent">
+                    {messages.map(m => (
+                        <ChatMessage
+                            class="item"
+                            key={m.id}
+                            role={m.role}
+                            content={m.content}
+                            aiProfilePic={aiProfilePic}
+                        />
+                    ))}
+                </div>
             </div>
 
             <form onSubmit={handleSubmit} className={`fixed bottom-0 w-full max-w-md p-2 ${bottomMarginClass}`}>
