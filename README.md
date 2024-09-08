@@ -1,7 +1,7 @@
 Antud projekti raames on tehtud kerge vestlusrobot kasutades openai apit.
 
 ## Koodi struktuur
-Tegemist on next.js Typescript rakendusega, mis kasutab reacti hook'e. Fail Layout.tsx määrab rakenduse peamised paigutuse ja metaandmed ja kasutab Next.js'i, et määrata globaalsed fondid. Rakenduses on kasutusel üks CSS fail (global.css), kuid kasutab enamasti TailwindCSSi stiili määramiseks. Valisin TailwindCSS, sest seda on kerge kasutada. Rakenduse koodi loetavuse nimel on jagatud kood komponentideks, kasutatud index.ts faile import statementide lühendamiseks ja kerimise funktsionaalsus teostatud läbi CSS'i ning kasutusel public kaust faviconi ja muude rakenduse tulevikus vajalike resource'ide hoidmiseks.
+Tegemist on [Next.js](https://nextjs.org) Typescript rakendusega, mis kasutab Reacti hook'e. Fail Layout.tsx määrab rakenduse peamised paigutuse ja metaandmed ja kasutab Next.js'i, et määrata globaalsed fondid. Rakenduses on kasutusel üks CSS fail (global.css), kuid kasutab enamasti TailwindCSSi stiili määramiseks. Valisin TailwindCSS, sest seda on kerge kasutada. Rakenduse koodi loetavuse nimel on jagatud kood komponentideks, kasutatud index.ts faile import statementide lühendamiseks, kerimise funktsionaalsus teostatud läbi CSS'i ning kasutusel public kaust faviconi ja muude rakenduse tulevikus vajalike resource'ide hoidmiseks.
 
 ## Kasutaja sõbralikkus
 
