@@ -19,7 +19,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ role, content, aiProfilePic }
                 />
             )}
             <div
-                className={`max-w-xs p-2 rounded shadow-xl ${role === 'user' ? 'bg-gray-500 text-white' : 'bg-gray-300 text-black'} ${role === 'assistant' ? 'ml-2' : ''}`}
+                className={` max-w-1xl lg:max-w-2xl xl:max-w-3xl p-2 rounded shadow-xl ${role === 'user' ? 'bg-gray-500 text-white' : 'bg-gray-300 text-black'} ml-2`}
             >
                 {content}
             </div>

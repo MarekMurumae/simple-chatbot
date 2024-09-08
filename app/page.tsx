@@ -51,7 +51,7 @@ export default function Chat() {
     const pyClass = windowHeight && windowHeight < 1000 ? 'py-0' : 'py-10';
 
     return (
-        <div className={`flex flex-col w-full max-w-md ${pyClass} mx-auto stretch`}>
+        <div className={`flex flex-col w-full ${pyClass} mx-auto stretch max-w-2xl lg:max-w-3xl xl:max-w-4xl`}>
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
             <div className="scroller">
@@ -67,7 +67,7 @@ export default function Chat() {
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit} className={`fixed bottom-0 w-full max-w-md p-2 ${bottomMarginClass}`}>
+            <form onSubmit={handleSubmit} className={`fixed bottom-0 w-full p-2 ${bottomMarginClass} max-w-2xl lg:max-w-3xl xl:max-w-4xl`}>
                 <input
                     ref={setInputRef}
                     className="w-full p-2 border border-gray-300 rounded shadow-xl"
