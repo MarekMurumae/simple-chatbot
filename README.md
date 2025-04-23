@@ -16,9 +16,9 @@ Rakenduse peamiseks ohuks on bottimine ja suur (suurem kui open ai praegune key 
 
 Ohuks on ka rakenduse api võti, kuid see on juba Verceli poolt kaitstud. Lisaks ei ole võti kätte saadav siit repositooriumist.
 
-## Live
+## Live (❗Currently there is no working API key and therefor the chatbot does not work)
 
-App is live at: https://simple-chatbot-liard.vercel.app/
+App is live at: https://simple-chatbot-liard.vercel.app/ 
 
 ## Running development server
 
